@@ -6,14 +6,12 @@ using System.Threading.Tasks;
 
 namespace Banco
 {
-    internal class ContaPoupanca
+    internal class ContaPoupanca : ContaBancaria
     {
-        public class ContaPoupanca : ContaBancaria
+        public ContaPoupanca(int numeroConta, string titular, double saldoInicial) : base(numeroConta, titular, saldoInicial)
         {
-            public ContaPoupanca(int numeroConta, string titular, double saldoInicial) : base (numeroConta, titular, saldoInicial)
-            {
-                TaxaSaque = 5;
-            }
+
         }
+
     }
 }

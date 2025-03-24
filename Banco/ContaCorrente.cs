@@ -9,6 +9,9 @@ namespace Banco
 {
     internal class ContaCorrente : ContaBancaria
     {
-        public ContaCorrente(int numeroConta, string titular, double saldo) : 
+        public ContaCorrente(int numeroConta, string titular, double saldo) : base(numeroConta, titular, saldo)
+        {
+            Ta
+        }
     }
 }

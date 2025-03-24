@@ -8,14 +8,13 @@ namespace Banco
 {
     internal class ContaBancaria
     {
-        private int _numero;
+        private int _numerocom;
         private string _titular;
         private double _saldo;
-        private 
         public int Numero
         {
-            get { return _numero; }
-            set { _numero = value; }
+            get { return _numerocom;}
+            set { _numerocom = value;}
         }
 
         public string Titular
@@ -37,7 +36,7 @@ namespace Banco
         }
         public double Depositar(double valor)
         {
-            Saldo += valor * (1 + PercentualBonusDeposito / 100);
+            Saldo += valor * (1 +100);
             return Saldo;
         }
 
