@@ -11,6 +11,8 @@ namespace Banco
         private int _numerocom;
         private string _titular;
         private double _saldo;
+        private double _taxa;
+        private double _percentual;
         public int Numero
         {
             get { return _numerocom;}
@@ -27,6 +29,16 @@ namespace Banco
             get { return _saldo; }
             set { _saldo = value; }
         }
+        protected double Taxa
+        {
+            get { return _taxa; }
+            set { _taxa = value; }
+        }
+        protected double Percentual
+        {
+            get { return _percentual; }
+            set { _percentual = value; }
+        }
         
         public ContaBancaria(int numeroConta, string titular, double saldoInicial)
         {
@@ -36,19 +48,20 @@ namespace Banco
         }
         public double Depositar(double valor)
         {
-            Saldo += valor * (1 +100);
+            Saldo += valor * (1 + Percentual/100);
             return Saldo;
         }
 
         public double Sacar (double valor)
         {
-            Saldo -=(valor);
+            Saldo -=(valor + Taxa);
             return Saldo;
         }
 
         public void ExibirSaldo()
         {
-            Console.WriteLine($"Seu saldo éw {Saldo}");
+            Console.WriteLine(Titular);
+            Console.WriteLine($"Seu saldo é {Saldo}");
         }
     }
 }

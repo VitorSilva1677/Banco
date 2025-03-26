@@ -10,7 +10,7 @@ namespace Banco
     {
         public ContaPoupanca(int numeroConta, string titular, double saldoInicial) : base(numeroConta, titular, saldoInicial)
         {
-
+            Percentual = 0.5;
         }
 
     }

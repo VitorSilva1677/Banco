@@ -11,7 +11,8 @@ namespace Banco
     {
         public ContaCorrente(int numeroConta, string titular, double saldo) : base(numeroConta, titular, saldo)
         {
-            Ta
+            Taxa = 5;
         }
+
     }
 }
